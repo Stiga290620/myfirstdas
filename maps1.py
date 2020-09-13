@@ -40,7 +40,7 @@ df = pd.read_csv("dead-infected-12.csv")
 # App layout
 app.layout = html.Div([
 
-    html.H1("Отношение смертельных случаев COVID-19 к выявленным, %", style={'text-align': 'center'}),
+    html.H1("ОТНОШЕНИЕ смертельных случаев COVID-19 к выявленным, %", style={'text-align': 'center'}),
 
     # dcc.Dropdown(id="slct_year",
     #              options=[
