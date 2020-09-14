@@ -1,1 +1,1 @@
-web: gunicorn maps1:server
+web: gunicorn maps101:server
