@@ -68,7 +68,7 @@ def update_graph(option_slctd):
 
 
     fig.update_layout(
-        title_text='Animation for Паша',
+        title_text='Анимация для периода с 18.03.20 по 17.09.20',
         geo=dict(
         showframe=False,
         showcoastlines=False,
