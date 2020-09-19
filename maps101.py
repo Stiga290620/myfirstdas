@@ -66,9 +66,9 @@ def update_graph(option_slctd):
        template='plotly_dark'
     )
 
-
+    sss='Анимация для периода с '+ df0.Date[0]+' по '+df0.Date[len(df0.Date)-1]
     fig.update_layout(
-        title_text='Анимация для периода с 18.03.20 по 17.09.20',
+        title_text=sss,
         geo=dict(
         showframe=False,
         showcoastlines=False,
