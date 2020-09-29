@@ -23,14 +23,15 @@ app.layout = html.Div([
     html.H1("Отношение смертельных случаев COVID-19 к выявленным, %", style={'text-align': 'center'}),
 
 
-     dcc.Dropdown(id="slct_year",
-                  options=[],
-                  multi=False,
-                  value='Animation',
-                  style={'width': "40%"}
-                  ),
-    html.Div(id='output_container', children=[]),
-    html.Br(),
+     # dcc.Dropdown(id="slct_year",
+     #              options=[],
+     #              multi=False,
+     #              value='Animation',
+     #              style={'width': "40%"}
+     #              ),
+    html.Div(id='input_container', children=[]),
+#    html.Div(id='output_container', children=[]),
+#    html.Br(),
 
     dcc.Graph(id='my_bee_map', figure={})
 
@@ -41,13 +42,13 @@ app.layout = html.Div([
 # Connect the Plotly graphs with Dash Components
 
 @app.callback(
-     [Output(component_id='output_container', component_property='children'),
-      Output(component_id='my_bee_map', component_property='figure')],
-     [Input(component_id='slct_year', component_property='value')]
+     #Output(component_id='output_container', component_property='children'),
+     Output(component_id='my_bee_map', component_property='figure'),
+    [Input(component_id='input_container', component_property='children')]
 )
 #
 def update_graph(option_slctd):
-    container = "The data chosen by user was: {}".format(option_slctd)
+#    container = [] #"The data chosen by user was: {}".format(option_slctd)
 
     # Plotly Express
 
@@ -87,7 +88,7 @@ def update_graph(option_slctd):
         )
 
 
-    return container, fig
+    return  fig   #container,
 
 
 # ------------------------------------------------------------------------------
