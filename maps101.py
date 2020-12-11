@@ -21,6 +21,11 @@ df0 = pd.read_csv("2-1.csv")
 app.layout = html.Div([
 
     html.H1("Отношение смертельных случаев COVID-19 к выявленным, %", style={'text-align': 'center'}),
+    html.Div(
+        html.P(['(Динамика летальности во время пандемии COVID-19 за период c '
+                + df0.Date[0]+' по '+df0.Date[len(df0.Date)-1]+')']),
+        style={'text-align': 'center'},
+    ),
 
 
      # dcc.Dropdown(id="slct_year",
@@ -33,7 +38,15 @@ app.layout = html.Div([
 #    html.Div(id='output_container', children=[]),
 #    html.Br(),
 
-    dcc.Graph(id='my_bee_map', figure={})
+    dcc.Graph(id='my_bee_map', figure={}),
+
+    html.Footer([
+        html.P(['Разработал:', html.A('Юрий', href='https://twitter.com/t_Yriy_w')]),
+        # html.A('Юрий', href='https://twitter.com/t_Yriy_w'),
+        html.P('2020 год'),
+    ],
+        style={'text-align': 'center'},
+    ),
 
 ])
 
@@ -67,9 +80,9 @@ def update_graph(option_slctd):
        template='plotly_dark'
     )
 
-    sss='Анимация для периода с '+ df0.Date[0]+' по '+df0.Date[len(df0.Date)-1]
+    # sss='Анимация для периода с '+ df0.Date[0]+' по '+df0.Date[len(df0.Date)-1]
     fig.update_layout(
-        title_text=sss,
+        # title_text=sss,
         geo=dict(
         showframe=False,
         showcoastlines=False,
