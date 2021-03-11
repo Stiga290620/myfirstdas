@@ -43,7 +43,7 @@ app.layout = html.Div([
     html.Footer([
         html.P(['Разработал:', html.A('Юрий', href='https://twitter.com/t_Yriy_w')]),
         # html.A('Юрий', href='https://twitter.com/t_Yriy_w'),
-        html.P('2020 год'),
+        html.P('2021 год'),
     ],
         style={'text-align': 'center'},
     ),
