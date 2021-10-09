@@ -23,7 +23,7 @@ app.layout = html.Div([
     html.H1("Отношение смертельных случаев COVID-19 к выявленным, %", style={'text-align': 'center'}),
     html.Div(
         html.P(['(Динамика летальности во время пандемии COVID-19 за период c '
-                + df0.Date[0]+' по '+df0.Date[len(df0.Date)-1]+')']),
+                + df0.Date[0]+' по '+df0.Date[len(df0.Date)-1]+')-']),
         style={'text-align': 'center'},
     ),
 
